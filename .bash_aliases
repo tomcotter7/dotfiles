@@ -1,13 +1,8 @@
 # aliases
 
-# source venv/bin/activate
-
-alias venv='source venv/bin/activate'
-
-alias takenotes='function _takenotes() {
-    cd ~/docs/work/daily-notes
-    ./takenotes "$1"
-}; _takenotes'
+alias venv='function _venv() {
+    source $1/bin/activate
+}; _venv'
 
 alias pdffer='function _pdffer() {
     local tmp_file
