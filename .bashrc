@@ -134,3 +134,5 @@ fi
 if [ -f ~/.secrets ]; then
     source ~/.secrets
 fi
+
+. "$HOME/.cargo/env"

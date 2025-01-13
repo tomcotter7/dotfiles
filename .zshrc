@@ -104,6 +104,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH=$PATH:~/.local/bin
+export PATH="$PATH:/opt/nvim/"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -116,3 +117,9 @@ fi
 if [ -f ~/.secrets ]; then
     source ~/.secrets
 fi
+
+export PATH="$PATH:/opt/nvim/"
+
+. "$HOME/.cargo/env"
+
+export PATH="$PATH:/home/tcotter/.modular/bin"
