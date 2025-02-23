@@ -11,3 +11,7 @@ alias pdffer='function _pdffer() {
     zathura "$tmp_file" && \
     rm "$tmp_file"
 }; _pdffer'
+
+alias tf='function _tf() {
+  termflow
+}; _tf'
