@@ -12,6 +12,5 @@ alias pdffer='function _pdffer() {
     rm "$tmp_file"
 }; _pdffer'
 
-alias tf='function _tf() {
-  termflow
-}; _tf'
+
+alias tf='termflow'
