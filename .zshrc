@@ -122,5 +122,7 @@ export PATH="$PATH:/opt/nvim/"
 
 # uncomment for language specifc stuff
 . "$HOME/.cargo/env"
-# export PATH="$PATH:/home/tcotter/.modular/bin"
+export PATH="$PATH:$HOME/.modular/bin"
 # export PATH=$PATH:/usr/local/go/bin
+
+cd .
