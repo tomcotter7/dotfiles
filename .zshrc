@@ -126,3 +126,7 @@ export PATH="$PATH:$HOME/.modular/bin"
 # export PATH=$PATH:/usr/local/go/bin
 
 cd .
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/thomas.cotter/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
