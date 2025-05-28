@@ -3,6 +3,6 @@ quit-after-last-window-closed  = false
 shell-integration              = zsh
 macos-titlebar-style           = tabs
 macos-auto-secure-input        = true
-background-opacity             = 0.9
+background-opacity             = 0.85
 title                          = "ghostty"
 mouse-hide-while-typing        = true
