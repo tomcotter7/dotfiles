@@ -1,8 +1,9 @@
-theme                          = rose-pine
+theme                          = rose-pine-moon
 quit-after-last-window-closed  = false
 shell-integration              = zsh
-macos-titlebar-style           = tabs
+macos-titlebar-style           = transparent
 macos-auto-secure-input        = true
+macos-non-native-fullscreen    = true
 background-opacity             = 0.85
-title                          = "ghostty"
+title                          = "🔒in"
 mouse-hide-while-typing        = true
