@@ -131,3 +131,4 @@ cd .
 export PATH="/Users/thomas.cotter/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/Users/thomas.cotter/.pixi/bin:$PATH"
