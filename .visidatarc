@@ -1,0 +1,23 @@
+from visidata import options
+import subprocess
+import ast
+
+def is_url_list_string(val):
+    return isinstance(val, str) and val.startswith("['http") and val.endswith("']")
+
+def open_url_list_ql(vd, path, filetype):
+    try:
+        urls = ast.literal_eval(path)
+        if not isinstance(urls, list):
+            return False 
+
+        procs = [subprocess.Popen(['qlmanage', '-p', url]) for url in urls]
+        
+        vd.status(f"Launched {len(procs)} Quick Look viewers")
+        return True 
+
+    except (ValueError, SyntaxError) as e:
+        vd.fail(f"Failed to parse or open URL list: {e}")
+        return False 
+
+options.openers.insert(0, (is_url_list_string, open_url_list_ql))
