@@ -25,8 +25,8 @@ alias tf='termflow'
 
 
 grec() {
-  local count=${1:-5}
-  git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short)' | head -n "$count"
+  local count=${1:-10}
+  git checkout $(git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short)' | head -n "$count" | fzf)
 }
 
 
