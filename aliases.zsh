@@ -23,6 +23,13 @@ alias pdffer='function _pdffer() {
 
 alias tf='termflow'
 
+
+grec() {
+  local count=${1:-5}
+  git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short)' | head -n "$count"
+}
+
+
 vd-open-url() {
     if [[ $# -eq 0 ]]; then
         echo "Usage: vd-open-url <cell_content>" >&2

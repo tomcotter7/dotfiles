@@ -1,9 +1,10 @@
-theme                          = rose-pine-moon
+theme                          = Rose Pine Moon
 quit-after-last-window-closed  = false
 shell-integration              = zsh
-macos-titlebar-style           = transparent
+macos-titlebar-style           = hidden
 macos-auto-secure-input        = true
+macos-window-buttons           = hidden
 macos-non-native-fullscreen    = true
-background-opacity             = 0.85
+background-opacity             = 0.95
 title                          = "🔒in"
 mouse-hide-while-typing        = true
