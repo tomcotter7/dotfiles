@@ -1,7 +1,7 @@
 theme                          = Rose Pine Moon
 quit-after-last-window-closed  = false
 shell-integration              = zsh
-macos-titlebar-style           = hidden
+macos-titlebar-style           = native
 macos-auto-secure-input        = true
 macos-window-buttons           = hidden
 macos-non-native-fullscreen    = true
