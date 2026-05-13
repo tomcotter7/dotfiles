@@ -132,3 +132,12 @@ export PATH="/Users/thomas.cotter/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/Users/thomas.cotter/.pixi/bin:$PATH"
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+### MANAGED BY DEPOP-DBT START
+AIRFLOW_DATE_FUNCTION() { date -v-1d +%Y-%m-%d }
+export DBT_INITIALS_ALIAS_NAME=tomc
+export AIRFLOW_EXECUTION_DATE=$(AIRFLOW_DATE_FUNCTION)
+### MANAGED BY DEPOP-DBT END
