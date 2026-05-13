@@ -1,0 +1,1 @@
+30 17 * * Mon-Fri osascript -e 'display notification "Any tasks complete? Create the .plan file!" with title "termflow"'
