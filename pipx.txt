@@ -1,0 +1,6 @@
+chevron
+depop_smx
+jupytext
+pre-commit
+tecton
+visidata

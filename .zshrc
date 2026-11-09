@@ -103,6 +103,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
 export PATH=$PATH:~/.local/bin
 export PATH="$PATH:/opt/nvim/"
 

@@ -29,6 +29,8 @@ grec() {
   git checkout $(git for-each-ref --sort=-committerdate refs/heads/ --format='%(refname:short)' | head -n "$count" | fzf)
 }
 
+alias groot='cd "$(git rev-parse --show-toplevel)"'
+
 
 vd-open-url() {
     if [[ $# -eq 0 ]]; then

@@ -1,0 +1,45 @@
+{
+  "env": {
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "30"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(uv run --directory /Users/thomas.cotter/Documents/claudes-sandbox *)",
+      "Read(//Users/thomas.cotter/Documents/claudes-sandbox/**)",
+      "Edit(//Users/thomas.cotter/Documents/claudes-sandbox/**)"
+    ],
+    "additionalDirectories": [
+      "/Users/thomas.cotter/Documents/claudes-sandbox"
+    ]
+  },
+  "model": "sonnet",
+  "hooks": {
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude needs unblocking\" with title \"Claude\"'"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "atlassian@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true
+  },
+  "effortLevel": "medium",
+  "promptSuggestionEnabled": false,
+  "awaySummaryEnabled": false,
+  "theme": "light",
+  "autoCompactEnabled": true
+}

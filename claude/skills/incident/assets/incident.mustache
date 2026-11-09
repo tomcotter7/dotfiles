@@ -1,0 +1,76 @@
+## Incident Summary: {{title}}
+
+**Incident ID:** {{#incident_id}}{{incident_id}}{{/incident_id}}{{^incident_id}}N/A{{/incident_id}}
+**Date:** {{date}}
+**Severity:** {{severity}}
+**Duration:** {{#duration}}{{duration}}{{/duration}}{{^duration}}TBD{{/duration}}
+**Status:** {{status}}
+
+---
+
+### What Happened
+
+{{what_happened}}
+
+---
+
+### Impact
+
+| Metric | Value |
+|--------|-------|
+| Users affected | {{impact.users_affected}} |
+| Duration | {{impact.duration}} |
+| Business impact | {{#impact.business_impact}}{{impact.business_impact}}{{/impact.business_impact}}{{^impact.business_impact}}Assessing{{/impact.business_impact}} |
+
+**Features impacted:**
+{{#impact.features_impacted}}
+- {{.}}
+{{/impact.features_impacted}}
+
+**Affected platforms:** {{#impact.platforms}}{{.}} {{/impact.platforms}}{{^impact.platforms}}All{{/impact.platforms}}
+
+---
+
+### Timeline
+
+All times in {{#timezone}}{{timezone}}{{/timezone}}{{^timezone}}UTC{{/timezone}}.
+
+| Time | Event |
+|------|-------|
+{{#timeline}}
+| {{time}} | {{event}} |
+{{/timeline}}
+
+---
+
+### Root Cause
+
+{{#root_cause}}{{root_cause}}{{/root_cause}}{{^root_cause}}[Under investigation]{{/root_cause}}
+
+---
+
+### Resolution
+
+{{#resolution}}{{resolution}}{{/resolution}}{{^resolution}}[Pending]{{/resolution}}
+
+---
+
+### Next Steps
+
+{{#next_steps}}
+- [ ] {{.}}
+{{/next_steps}}
+{{^next_steps}}
+- [ ] Post-mortem to be scheduled
+{{/next_steps}}
+
+---
+
+### Sources
+
+{{#sources}}
+- {{.}}
+{{/sources}}
+{{^sources}}
+_No external sources linked_
+{{/sources}}
