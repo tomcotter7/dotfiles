@@ -2,7 +2,6 @@ tap "1password/tap"
 tap "coursier/formulas"
 tap "databricks/tap"
 tap "dbt-labs/dbt-cli"
-tap "depop/tools", "git@github.com:depop/homebrew-tools"
 tap "raine/claude-history"
 # Use AWS IAM credentials to authenticate to Kubernetes
 brew "aws-iam-authenticator"
@@ -89,8 +88,6 @@ brew "dbt-labs/dbt-cli/dbt", trusted: true
 # Browse and search Claude Code conversation history
 brew "raine/claude-history/claude-history", trusted: true
 brew "databricks/tap/databricks", trusted: true
-brew "depop/tools/depop-cli", trusted: true
-brew "depop/tools/dpdb", trusted: true
 brew "coursier/formulas/coursier", trusted: true
 cask "1password-cli"
 # Cross-platform Text Expander written in Rust

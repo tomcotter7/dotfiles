@@ -71,8 +71,8 @@ esac
 cat <<'EOF'
 
 Done. Manual steps:
-  - SSH keys + ~/.ssh/config: the github.personal.com alias (dotfiles, nvim-config) and github.com (depop/tools tap). Do this BEFORE running this script.
+  - SSH keys + ~/.ssh/config: the github.personal.com alias (dotfiles, nvim-config). Do this BEFORE running this script.
   - Clone ~/Personal/termflow, ~/Personal/dabctl and ~/Documents/claude-team-workflows, then run their installs.
-  - Copy ~/.secrets and ~/.zshrc.local. Install Rancher Desktop. Set up depop-dbt.
+  - Copy ~/.secrets and ~/.zshrc.local. Install Rancher Desktop. Set up depop-dbt. Install depop-cli (authaws needs it).
   - Open a new shell, then run `claude` and log in.
 EOF
