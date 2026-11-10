@@ -30,6 +30,7 @@ install_packages() {
     [[ -d "$HOME/.oh-my-zsh" ]] || RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     local plugin="$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
     [[ -d "$plugin" ]] || git clone https://github.com/zsh-users/zsh-autosuggestions "$plugin"
+    [[ -d "$HOME/.tmux/plugins/tpm" ]] || git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 
     # .zshrc sources ~/.cargo/env with no guard
     [[ -f "$HOME/.cargo/env" ]] || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
