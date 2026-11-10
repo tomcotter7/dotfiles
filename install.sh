@@ -54,7 +54,7 @@ link_dotfiles() {
 
     local f
     for f in CLAUDE.md settings.json statusline.sh \
-        commands/change.md scripts/file-change-tracker.sh \
+        commands/change.md \
         skills/dab-autopilot skills/designing-tufte-graphics skills/grill-me skills/incident skills/playground skills/termflow; do
         link "claude/$f" "$HOME/.claude/$f"
     done
