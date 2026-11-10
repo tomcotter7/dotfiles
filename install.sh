@@ -62,9 +62,17 @@ link_dotfiles() {
     crontab "$DOTFILES/crontab"
 }
 
+# Fast key repeat (macOS defaults feel slow in vim). Needs a re-login to apply.
+macos_defaults() {
+    [[ "$(uname)" == "Darwin" ]] || return 0
+    defaults write -g KeyRepeat -int 2
+    defaults write -g InitialKeyRepeat -int 15
+    defaults write -g ApplePressAndHoldEnabled -bool false
+}
+
 case "${1:-all}" in
     links) link_dotfiles ;;
-    all) install_packages; link_dotfiles ;;
+    all) install_packages; link_dotfiles; macos_defaults ;;
     *) echo "usage: $0 [all|links]" >&2; exit 1 ;;
 esac
 
