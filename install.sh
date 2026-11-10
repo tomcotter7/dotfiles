@@ -55,7 +55,7 @@ link_dotfiles() {
     link zathurarc ~/.config/zathura/zathurarc
 
     local f
-    for f in CLAUDE.md settings.json statusline.sh team-config.md \
+    for f in CLAUDE.md settings.json statusline.sh \
         commands/change.md scripts/file-change-tracker.sh \
         skills/dab-autopilot skills/designing-tufte-graphics skills/grill-me skills/incident skills/playground skills/termflow; do
         link "claude/$f" "$HOME/.claude/$f"
