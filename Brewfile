@@ -88,11 +88,11 @@ brew "zsh-syntax-highlighting"
 # dbt Labs' CLI.
 brew "dbt-labs/dbt-cli/dbt", trusted: true
 # Browse and search Claude Code conversation history
-brew "raine/claude-history/claude-history"
-brew "databricks/tap/databricks"
-brew "depop/tools/depop-cli"
-brew "depop/tools/dpdb"
-brew "coursier/formulas/coursier"
+brew "raine/claude-history/claude-history", trusted: true
+brew "databricks/tap/databricks", trusted: true
+brew "depop/tools/depop-cli", trusted: true
+brew "depop/tools/dpdb", trusted: true
+brew "coursier/formulas/coursier", trusted: true
 cask "1password-cli"
 # Cross-platform Text Expander written in Rust
 cask "espanso"
