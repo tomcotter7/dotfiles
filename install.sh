@@ -32,8 +32,6 @@ install_packages() {
     [[ -d "$plugin" ]] || git clone https://github.com/zsh-users/zsh-autosuggestions "$plugin"
     [[ -d "$HOME/.tmux/plugins/tpm" ]] || git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 
-    # .zshrc sources ~/.cargo/env with no guard
-    [[ -f "$HOME/.cargo/env" ]] || curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
     have uv || curl -LsSf https://astral.sh/uv/install.sh | env UV_NO_MODIFY_PATH=1 sh
     have claude || curl -fsSL https://claude.ai/install.sh | bash
     export PATH="$HOME/.local/bin:$PATH"
@@ -65,17 +63,9 @@ link_dotfiles() {
     crontab "$DOTFILES/crontab"
 }
 
-install_claude_plugins() {
-    claude plugin marketplace add dbt-labs/dbt-agent-skills || true
-    local p
-    for p in $(jq -r '.enabledPlugins | keys[]' "$DOTFILES/claude/settings.json"); do
-        claude plugin install "$p" || echo "WARN: claude plugin install $p failed" >&2
-    done
-}
-
 case "${1:-all}" in
     links) link_dotfiles ;;
-    all) install_packages; link_dotfiles; install_claude_plugins ;;
+    all) install_packages; link_dotfiles ;;
     *) echo "usage: $0 [all|links]" >&2; exit 1 ;;
 esac
 

@@ -32,3 +32,14 @@ grec() {
 
 alias groot='cd "$(git rev-parse --show-toplevel)"'
 
+# gwt <type> <name>: worktree at ../<repo>-<name> on branch <type>/<name>
+unalias gwt 2>/dev/null # omz git plugin: gwt='git worktree'
+gwt() {
+  [[ $# -eq 2 ]] || { echo "usage: gwt <feat|fix|...> <name>" >&2; return 1; }
+  local root
+  # main checkout, so running from inside a worktree doesn't give repo-a-b
+  root=$(git rev-parse --path-format=absolute --git-common-dir) || return 1
+  root=${root:h}
+  git -C "$root" worktree add "${root:h}/${root:t}-$2" -b "$1/$2"
+}
+
