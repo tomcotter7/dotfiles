@@ -1,5 +1,4 @@
 chevron
-depop_smx
 jupytext
 pre-commit
 visidata
