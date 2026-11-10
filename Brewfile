@@ -4,7 +4,6 @@ tap "databricks/tap"
 tap "dbt-labs/dbt-cli"
 tap "depop/tools", "git@github.com:depop/homebrew-tools"
 tap "raine/claude-history"
-tap "visidata/vd", "https://github.com/visidata/homebrew-vd.git"
 # Use AWS IAM credentials to authenticate to Kubernetes
 brew "aws-iam-authenticator"
 # Interpreted, interactive, object-oriented programming language
