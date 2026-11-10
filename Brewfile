@@ -1,11 +1,8 @@
 tap "1password/tap"
-tap "argoproj/tap"
 tap "coursier/formulas"
 tap "databricks/tap"
 tap "dbt-labs/dbt-cli"
 tap "depop/tools", "git@github.com:depop/homebrew-tools"
-tap "hashicorp/tap"
-tap "modem-dev/tap"
 tap "raine/claude-history"
 tap "visidata/vd", "https://github.com/visidata/homebrew-vd.git"
 # Use AWS IAM credentials to authenticate to Kubernetes
@@ -90,6 +87,12 @@ brew "zoxide"
 brew "zsh-syntax-highlighting"
 # dbt Labs' CLI.
 brew "dbt-labs/dbt-cli/dbt", trusted: true
+# Browse and search Claude Code conversation history
+brew "raine/claude-history/claude-history"
+brew "databricks/tap/databricks"
+brew "depop/tools/depop-cli"
+brew "depop/tools/dpdb"
+brew "coursier/formulas/coursier"
 cask "1password-cli"
 # Cross-platform Text Expander written in Rust
 cask "espanso"

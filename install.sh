@@ -50,7 +50,6 @@ link_dotfiles() {
     link .tmux.conf ~/.tmux.conf
     link aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
     link config ~/Library/Application\ Support/com.mitchellh.ghostty/config
-    link config.toml ~/.config/hunk/config.toml
     link zathurarc ~/.config/zathura/zathurarc
 
     local f
