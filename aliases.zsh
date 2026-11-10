@@ -22,6 +22,7 @@ alias pdffer='function _pdffer() {
 
 
 alias tf='termflow'
+alias cc="claude"
 
 
 grec() {
@@ -30,22 +31,4 @@ grec() {
 }
 
 alias groot='cd "$(git rev-parse --show-toplevel)"'
-
-
-vd-open-url() {
-    if [[ $# -eq 0 ]]; then
-        echo "Usage: vd-open-url <cell_content>" >&2
-        return 1
-    fi
-
-    local cell_content="$1"
-
-    if [[ "$cell_content" == \[*\] && "$cell_content" == *\] ]]; then
-        echo "$cell_content" | python3.13 -c "import sys, ast, shlex; [print(shlex.quote(u)) for u in ast.literal_eval(sys.stdin.read())]" | xargs -n 1 open
-    else
-        open "$cell_content"
-    fi
-}
-
-export -f vd-open-url &>/dev/null
 
