@@ -111,10 +111,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-if [ -f ~/.zshrc.local ]; then
-    source ~/.zshrc.local
-fi
-
 if [ -f ~/.secrets ]; then
     source ~/.secrets
 fi
@@ -123,7 +119,7 @@ export PATH="$PATH:/opt/nvim/"
 
 # uncomment for language specifc stuff
 export PATH="$PATH:$HOME/.modular/bin"
-# export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin
 
 cd .
 
@@ -135,9 +131,38 @@ export PATH="/Users/thomas.cotter/.pixi/bin:$PATH"
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
 
+# After compinit, which would otherwise wipe compdefs made here
+if [ -f ~/.zshrc.local ]; then
+    source ~/.zshrc.local
+fi
+
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ### MANAGED BY DEPOP-DBT START
 AIRFLOW_DATE_FUNCTION() { date -v-1d +%Y-%m-%d }
 export DBT_INITIALS_ALIAS_NAME=tomc
 export AIRFLOW_EXECUTION_DATE=$(AIRFLOW_DATE_FUNCTION)
 ### MANAGED BY DEPOP-DBT END
+# Setting Python Requests Extra CA Path
+export REQUESTS_CA_BUNDLE="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting CURL Extra CA Path
+export CURL_CA_BUNDLE="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting gRPC Extra CA Path
+export GRPC_DEFAULT_SSL_ROOTS_FILE_PATH="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting OpenSSL Extra CA Path
+export SSL_CERT_FILE="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting NodeJS Extra CA Path
+export NODE_EXTRA_CA_CERTS="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting Git SSL CA Info
+export GIT_SSL_CAINFO="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting AWS CA Bundle
+export AWS_CA_BUNDLE="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting Cargo CA Info
+export CARGO_HTTP_CAINFO="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting Conan C/C++ package manager CA Cert Path
+export CONAN_CACERT_PATH="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting Haskell Stack Certificate Path
+export SYSTEM_CERTIFICATE_PATH="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting Elixir Hex CA Certs Path
+export HEX_CACERTS_PATH="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
+# Setting Grype Anchore vulnerability scanner CA Cert
+export GRYPE_DB_CA_CERT="/Library/Application Support/Netskope/STAgent/download/nscacert_combined.pem"
