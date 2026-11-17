@@ -119,7 +119,7 @@ export PATH="$PATH:/opt/nvim/"
 
 # uncomment for language specifc stuff
 export PATH="$PATH:$HOME/.modular/bin"
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 cd .
 
@@ -136,9 +136,9 @@ if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ### MANAGED BY DEPOP-DBT START
-AIRFLOW_DATE_FUNCTION() { date -v-1d +%Y-%m-%d }
+AIRFLOW_DATE_FUNCTION() { date -v-1d +%Y-%m-%d 2>/dev/null || date -d yesterday +%Y-%m-%d }
 export DBT_INITIALS_ALIAS_NAME=tomc
 export AIRFLOW_EXECUTION_DATE=$(AIRFLOW_DATE_FUNCTION)
 ### MANAGED BY DEPOP-DBT END

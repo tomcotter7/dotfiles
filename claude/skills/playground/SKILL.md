@@ -28,7 +28,7 @@ A pasted snippet, or a file path with a line range. If the range is unclear, ask
    - a join key that exists on one side only
    - for torch: a batch of 1, and a dimension of size 1
    Mark each edge-case row with a comment that says which case it is.
-5. **Write the file** to `/Users/thomas.cotter/Documents/claudes-sandbox/playground/<short_name>.py`
+5. **Write the file** to `~/Documents/claudes-sandbox/playground/<short_name>.py`
    in `# %%` cell format. One cell per step. After each step, print the result:
    - pandas: `.head(20)` and `.shape`
    - Spark: `.show(truncate=False)` and `.count()`
@@ -37,7 +37,7 @@ A pasted snippet, or a file path with a line range. If the range is unclear, ask
    example "How many rows after the join? Which rows disappear?". Do not give the answers.
 7. **Add a `# try:` cell at the end** that is empty, for the user's own changes.
 8. **Run it once** to check that it works:
-   `uv run --directory /Users/thomas.cotter/Documents/claudes-sandbox python playground/<short_name>.py`
+   `uv run --directory ~/Documents/claudes-sandbox python playground/<short_name>.py`
    If it fails, fix the file. Do not show the output as an explanation.
 9. **Tell the user the path and how to run it.** Then stop. Do not explain the code.
    If the user asks what a step does, follow the Critical thinking rules in `CLAUDE.md`
